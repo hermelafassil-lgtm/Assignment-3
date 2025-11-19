@@ -21,16 +21,16 @@ router.get('/home', function(req, res, next) {
 
 /* GET About page. */
 router.get('/about', function(req, res, next) {
-  res.render('index', { title: 'About us' });
+  res.render('about', { title: 'About us' });
 });
 
 /* GET products page. */
 router.get('/products', function(req, res, next) {
-  res.render('index', { title: 'Products' });
+  res.render('products', { title: 'Products' });
 });
 
 router.get('/assignments', function(req, res, next) {
-  res.render('index', { title: 'Assignments' });
+  res.render('Assignments/index', { title: 'Assignments' });
 });
 
 

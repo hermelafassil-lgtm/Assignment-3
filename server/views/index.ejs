@@ -1,5 +1,59 @@
 <%- include ./partials/header.ejs %>
 <%- include ./partials/main_nav.ejs %>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %> page</p>
+   
+    <!DOCTYPE html>
+
+<head>
+    <title>GeeksforGeeks</title>
+    <link rel="stylesheet" 
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" 
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href=
+"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="styles.css">
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+    <div id="splash" class="animated-splash">
+        <div class="curtain">
+            <div class="splash-content">
+                <i class="fas fa-spin fa-spinner"></i>
+                <h1 class="animated-title">GeeksforGeeks</h1>
+                <h3 class="animated-subtitle">Learn, Code, Contribute!</h3>
+                <div class="animated-emoji" id="loadingEmoji">
+                    &#x1F60D;
+                </div>
+            </div>
+            <div class="additional-splash-effects"></div>
+        </div>
+    </div>
+    <div id="content" style="display: none;">
+        <div class="card">
+            <h1>
+                <i class="fas fa-code">
+                </i> GeeksforGeeks
+            </h1>
+            <p>Learn, Code, Contribute!</p>
+            <div class="animated-emoji" id="geeksEmoji">
+                &#x1F913;
+            </div>
+        </div>
+    </div>
+    <script src=
+"https://cdn.jsdelivr.net/npm/splash-screen@4.0.1/dist/splash-screen.min.js">
+    </script>
+    <script src="app.js">
+    </script>
+</body>
+
+</html>
 <%- include ./partials/footer.ejs %>

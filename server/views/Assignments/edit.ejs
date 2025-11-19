@@ -11,7 +11,7 @@
                     id="nameTextField"
                     placeholder="Enter the book title"
                     name="name" 
-                    value="<%= title.name%>"
+                    value="<%= Assignment.title%>"
                     required>
                 </div>
                 <div class="form-group">
@@ -23,6 +23,7 @@
                     value="<%= Assignment.course%>"
                     required>
                 </div>
+
                 <div class="form-group">
                     <label for="publishedTextField">Assignment duedate</label>
                     <input type="text" class="form-control"
@@ -32,6 +33,17 @@
                     value="<%= Assignment.duedate%>" 
                     required>
                 </div>
+
+                <div class="form-group">
+                    <label for="publishedTextField">Assignment duedate</label>
+                    <input type="text" class="form-control"
+                    id="publishedTextField"
+                    placeholder="Enter the year of book publication"
+                    name="published"
+                    value="<%= Assignment.description%>" 
+                    required>
+                </div>
+
                 <div class="form-group">
                     <label for="descriptionTextArea">Assignment priority</label>
                     <textarea type="text" class="form-control"
@@ -46,7 +58,7 @@
                     <input type="text" class="form-control"
                     id="priceTextField"
                     placeholder="Enter the price of the book"
-                    name="price" 
+                    name="status" 
                     value="<%= Assignment.status%>"
                     required>
                 </div>
@@ -56,7 +68,7 @@
                     <input type="text" class="form-control"
                     id="priceTextField"
                     placeholder="Enter the price of the book"
-                    name="price" 
+                    name="chapter" 
                     value="<%= Assignment.chapter%>"
                     required>
                 </div>

@@ -8,10 +8,7 @@ let Assignment = require('../model/assignment');
 router.get('/',async(req,res,next)=>{
     try{
         const AssignmentList = await Assignment.find();
-        res.render('Assignments/list',{
-            title:'Assignments',
-            AssignmentList:AssignmentsList,
-        })
+        res.render('Assignments/list',{ title:'Assignments',AssignmentList})
     }
     catch(err)
     {
@@ -46,11 +43,11 @@ router.post('/add',async(req,res,next)=>{
     try
     {
         let newAssignment = Assignment({
-            "title":req.body.name,
-            "course":req.body.author,
-            "duedate":req.body.published,
-            "priority":req.body.description,
-            "status":req.body.price,
+            "title":req.body.title,
+            "course":req.body.course,
+            "duedate":req.body.duedate,
+            "priority":req.body.priority,
+            "status":req.body.status,
             "chapter":req.body.chapter
         })
         Assignment.create(newAssignment).then(()=>{
@@ -93,12 +90,12 @@ router.post('/edit/:id',async(req,res,next)=>{
         let id = req.params.id;
         let updateAssignment = Assignment({
             "_id":id,
-            "assignment":req.body.assignment,
+            "title":req.body.title,
             "course":req.body.course,
             "duedate":req.body.duedate,
             "priority":req.body.priority,
             "status":req.body.status,
-            "chapter":req.chapter
+            "chapter":req.body.chapter
         })
         Assignment.findByIdAndUpdate(id,updateAssignment).then(()=>{
             res.redirect("/assignments")

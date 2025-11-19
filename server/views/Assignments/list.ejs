@@ -23,21 +23,22 @@
                         <td class="text-center col-2"><%= AssignmentList[count].title %></td>
                         <td class="text-center col-2"><%= AssignmentList[count].course %></td>
                         <td class="text-center col-1"><%= AssignmentList[count].duedate %></td>
-                        <td class="col-4"><%= AssignmentList[count].title %></td>
+                        <td class="col-4"><%= AssignmentList[count].description %></td>
                         <td class="text-center col-1"><%= AssignmentList[count].priority %></td>
+                        <td class="text-center col-1"><%= AssignmentList[count].status %></td>
                         <td class="text-center col-1"><%= AssignmentList[count].chapter %></td>
-                        <td class="text-center col-1"><%= AssignmentList[count].price %></td>
                         <td class="text-center col-1">
-                        <a href="/assignment/edit/<%= AssignmentList[count]._id%>" 
-                            class="btn btn-primary btn-sm">
-                            <i class="fas fa-pencil-alt"></i> Edit
-                        </a></td>
+                            <a href="/assignments/edit/<%= AssignmentList[count]._id %>" class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i> Edit
+                            </a>
+                        </td>
                         <td class="text-center col-1">
-                            <a href="/assignment/delete/<%= AssignmentList[count]._id%>" 
-                            class="btn btn-danger btn-sm"> 
-                            <i class="fas fa-trash-alt"></i> Delete</a></td>
-                        
+                            <a href="/assignments/delete/<%= AssignmentList[count]._id %>" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Delete
+                            </a>
+                        </td>
                     </tr>
+
                 <% } %>
             </table>
         </div>
