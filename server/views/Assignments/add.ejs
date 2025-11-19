@@ -1,0 +1,68 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="post">
+                <div class="form-group">
+                    <label for="nameTextField">Assignment Title</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter the Assignment title"
+                    name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="authorTextField">course </label>
+                    <input type="text" class="form-control"
+                    id="authorTextField"
+                    placeholder="Enter the course name"
+                    name="author" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="publishedTextField">duedate</label>
+                    <input type="text" class="form-control"
+                    id="publishedTextField"
+                    placeholder="Enter the due date of the assignments"
+                    name="published" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descriptionTextArea">priority </label>
+                    <textarea type="text" class="form-control"
+                    id="descriptionTextArea"
+                    placeholder="Enter the level of priority of the assignment"
+                    name="description" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="priceTextField">status </label>
+                    <input type="text" class="form-control"
+                    id="priceTextField"
+                    placeholder="Enter yoru status of the assignment"
+                    name="price" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="priceTextField">chapter </label>
+                    <input type="text" class="form-control"
+                    id="priceTextField"
+                    placeholder="Enter what chapters you will need to complete this assignment"
+                    name="price" required>
+                </div>
+
+                <br>
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit
+                </button>
+                <a href="/assignments" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include ../partials/footer.ejs %>
