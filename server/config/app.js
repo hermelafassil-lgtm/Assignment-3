@@ -1,11 +1,11 @@
+// 
 var dotenv = require('dotenv').config()
-
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var app = express(); // ✅ missing in your original file
+var app = express();  
 
 // configuring Databases
 let mongoose = require('mongoose');
@@ -19,8 +19,11 @@ mongoDB.once('open',()=>{
   console.log('Connected to the MongoDB');
 });
 
+// Imports route modules for index
 var indexRouter = require('../routes/index');
+// Imports route modules for users
 var usersRouter = require('../routes/users');
+// Imports route modules for assignments
 let assignmentsRouter = require('../routes/assignment');
 
 // view engine setup
@@ -49,7 +52,9 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
+  // Rensers the error message
   res.render('error', {title:'Error'});
 });
 
+// Exports the app
 module.exports = app;

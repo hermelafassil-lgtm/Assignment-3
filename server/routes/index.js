@@ -33,7 +33,7 @@ router.get('/products', function(req, res, next) {
 router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact us' });
 });
-
+/*GET contact page to confime the message has been sent  so the user does not get sent to the 404  page when they press send */
 router.post('/contact', (req, res) => {
     console.log(req.body);
 
@@ -43,5 +43,5 @@ router.post('/contact', (req, res) => {
     });
 });
 
-
+/* Exports router */
 module.exports = router;

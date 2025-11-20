@@ -1,14 +1,18 @@
-<%- include('./partials/header') %>
-<%- include('./partials/main_nav') %>
+<!-- Includes header.ejs  -->
+<%- include('partials/header') %>
+<!-- Includes main_nav.ejs  -->
+<%- include('partials/main_nav') %>
+<link rel="stylesheet" href="/styles/style.css">
+
 
 <!-- Splash Screen -->
 <div id="splash">
-  <h1 class="splash-text">Welcome to the Assignemnt Tracker !!!</h1>
+  <p1 class="splash-text">Welcome to your personalizable Assignment Tracker</p1>
 </div>
 
 <div class="container mt-5">
 
-    <h2>This is the Assignments main page. Below are the options to view your past assignments or Add a new Assignment to your list !</h2>
+    <h2>This is the main page. Below are the options to view your past assignments or add a new Assignment to your list !</h2>
 
     <!-- View all assignments -->
     <a href="/assignments" class="btn btn-primary mt-2">View Assignment List</a>

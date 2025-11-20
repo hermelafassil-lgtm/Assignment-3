@@ -1,6 +1,6 @@
 let mongoose = require('mongoose')
 
-// create a model class
+// creates a model class with the 
 let assignmentModel = mongoose.Schema({
     title:String,
     course:String,
@@ -9,9 +9,9 @@ let assignmentModel = mongoose.Schema({
     status: String,
     chapter:String
 },
-{
+{   // collection named assignments
     collection:"assignments"
 }
 );
-
+// Exports module 
 module.exports = mongoose.model('Assignment',assignmentModel);

@@ -1,38 +1,52 @@
-
-
+<!-- Includes header.ejs  -->
 <%- include('partials/header') %>
+<!-- Includes main_nav.ejs  -->
 <%- include('partials/main_nav') %>
+<!-- Style Sheet-->
+<link rel="stylesheet" href="/style.css">
 
+<!-- Only displays the code below on the Contact us page   -->
   <% if (title==='Contact us' ) { %>
-
+    
+<!-- Sets the contiainter size and width to 800px -->
 <div class="container mt-4" style="max-width: 850px;">
+<!-- Displays the title centerd in the middle   -->
   <h1 class="text-center mb-4"><%= title %></h1>
   <h5 class="text-center">
     If you have any questions/concerns or comments about the assignment tracker please fill out the form bellow.
   </h5>
 
-
+<!-- Container for the form   -->
 <div class="container">
     <div class="row">
         <div class="col-md">
+            <!-- Sends form data through post   -->
             <form action="contact" method="post"> 
 
                 <div class="form-group">
+                    <!-- Name label   -->
                     <label for="name">Name:</label>
+                    <!-- Input type is text  -->
                     <input type="text" class="form-control" id="name" name="name">
                 </div>
                 <div class="form-group">
+                    <!-- Email adress label   -->
                     <label for="email">Email address:</label>
+                    <!-- Input type is email  -->
                     <input type="email" class="form-control" id="email" name="email">
                 </div>
                 <div class="form-group">
+                    <!--Number label -->
                     <label for="tel">Number:</label>
+                    <!-- Input type is tel  -->
                     <input type="tel" class="form-control" id="mobile" name="mobile">
                 </div>
                 <div class="form-group">
+                    <!-- Your message title label   -->
                     <label for="message">Your message</label>
                     <textarea class="form-control" id="message" name="message"></textarea>
                 </div>
+                <!-- Submit Button    -->
                 <button type="submit" class="btn btn-primary">Send</button>
              </form>
             </form>
@@ -41,5 +55,5 @@
 </div>
 
 <% } %>
-
+<!-- Includes footer.ejs  -->
 <%- include('partials/footer') %>

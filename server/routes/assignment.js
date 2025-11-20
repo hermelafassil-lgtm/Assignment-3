@@ -1,10 +1,11 @@
 let express = require('express');
 let router = express.Router();
+// Connects to mongoose
 let mongoose = require('mongoose');
 // connect to our assignment model
 let Assignment = require('../model/assignment');
 
-// GET route for displaying the data from DB --> Read Operation
+// gets the route for displaying the data  
 router.get('/',async(req,res,next)=>{
     try{
         const AssignmentList = await Assignment.find();
@@ -23,7 +24,7 @@ router.get('/',async(req,res,next)=>{
         )
     }
 });
-// GET route for displaying the Add Page --> Create Operation
+// gets the route for displaying the add Page  
 router.get('/add',async(req,res,next)=>{
     try
     {
@@ -41,7 +42,7 @@ router.get('/add',async(req,res,next)=>{
         )
     }
 })
-// POST route for processing the Add Page --> Create Operation
+// gets the route for displayign the infomratoin to edit
 router.post('/add',async(req,res,next)=>{
     try
     {
@@ -67,7 +68,7 @@ router.post('/add',async(req,res,next)=>{
         )
     }
 })
-// GET route for displaying the Edit Page --> Update Operation
+// gets the route for displaying the Edit Page 
 router.get('/edit/:id',async(req,res,next)=>{
     try
     {
@@ -87,7 +88,7 @@ router.get('/edit/:id',async(req,res,next)=>{
     }
  
 })
-// POST route for processing the Edit Page --> Update Operation
+//posts roude for update Operation
 router.post('/edit/:id',async(req,res,next)=>{
     try{
         let id = req.params.id;
@@ -116,6 +117,7 @@ router.get('/delete/:id',async(req,res,next)=>{
     try{
         let id = req.params.id;
         Assignment.deleteOne({_id:id}).then(()=>{
+            // redirects to the assignemts page
             res.redirect("/assignments")
         })
     }
@@ -126,5 +128,5 @@ router.get('/delete/:id',async(req,res,next)=>{
     }
     
 })
-
+// exports the routuer
 module.exports = router;

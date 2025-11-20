@@ -1,6 +1,7 @@
 
-/* FULLSCREEN SPLASH */
+/*  SPLASH */
 #splash {
+  
   position: fixed;
   top: 0;
   left: 0;
@@ -13,26 +14,33 @@
   z-index: 9998;
   animation: fadeOut 2.1s ease forwards;
   animation-delay: 3s; /* how long splash stays */
+
 }
 
 /* Splash text */
 .splash-text {
+
   font-size: 5rem;
   font-weight: bold;
   color: rgb(0, 0, 0);
   opacity: 0;
   animation: fadeInText 1.5s ease forwards;
+
 }
 
 /* Text fade-in */
 @keyframes fadeInText {
+
   0% { opacity: 0; transform: scale(0.8); }
   100% { opacity: 1; transform: scale(1); }
+
 }
+ 
 
 /* Splash fade-out */
 @keyframes fadeOut {
   0% { opacity: 1; }
   100% { opacity: 0; visibility: hidden; }
+
 }
 

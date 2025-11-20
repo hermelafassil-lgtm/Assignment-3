@@ -1,5 +1,9 @@
+<!-- Includes header.ejs  -->
 <%- include ../partials/header.ejs %>
+<!-- Includes main_nav.ejs  -->
 <%- include ../partials/main_nav.ejs %>
+<!-- Style Sheet-->
+<link rel="stylesheet" href="/style.css">>
 
 <!--Main content-->
 <main class="container">
@@ -10,29 +14,46 @@
     
                 <!--Header Row-->
                 <tr class="d-flex">
+                    <!-- Title Header  -->
                     <th class="text-center col-2">Title</th>
+                    <!-- Course  Header  -->
                     <th class="text-center col-2">Course</th>
+                    <!-- Duedate  Header  -->
                     <th class="text-center col-2">duedate</th>
+                    <!--  Priorit Header  -->
                     <th class="text-center col-2">priority</th>
+                    <!-- Status  Header  -->
                     <th class="text-center col-2">status</th>
+                    <!-- Chapter  Header  -->
                     <th class="text-center col-2">chapter</th>
                 </tr>
+
                 <% for(let count=0; count<AssignmentList.length;count++) { %>
                     <tr class="d-flex">
+                        <!-- Title  Data cell  -->
                         <td class="text-center col-2"><%= AssignmentList[count].title %></td>
+                        <!-- Course  Data cell  -->
                         <td class="text-center col-2"><%= AssignmentList[count].course %></td>
+                        <!-- Due Date  Data cell  -->
                         <td class="text-center col-2"><%= AssignmentList[count].duedate %></td>
+                        <!-- Priority  Data cell  -->
                         <td class="text-center col-2"><%= AssignmentList[count].priority %></td>
+                        <!--  Status  Data cell  -->
                         <td class="text-center col-2"><%= AssignmentList[count].status %></td>
+                        <!--  Chapter Data cell  -->
                         <td class="text-center col-2"><%= AssignmentList[count].chapter %></td>
                         <td class="text-center col-2">
+                            <!--  Button Link to tmake edits the the created assignemtns-->
                             <a href="/assignments/edit/<%= AssignmentList[count]._id %>" class="btn btn-primary btn-sm">
-                                <i class="fas fa-pencil-alt"></i> Editss
+                                <i class="fas fa-pencil-alt"></i> Edits
                             </a>
                         </td>
+    
                         <td class="text-center col-1">
+                            <!--  Button Link to  deleate a created assignemtns-->
                             <a href="/assignments/delete/<%= AssignmentList[count]._id %>" 
-                               class="btn btn-danger btn-sm"
+
+                                 class="btn btn-danger btn-sm"
                                onclick="return confirm('Are you 100% sure you would like to delete this assignment? this action canNOT be undone!');">
                             <i class="fas fa-trash-alt"></i> Delete
                             </a>

@@ -1,12 +1,20 @@
+<!-- Includes header.ejs  -->
 <%- include ../partials/header.ejs %>
+<!-- Includes main_nav.ejs  -->
 <%- include ../partials/main_nav.ejs %>
+<!-- Style Sheet-->
+<link rel="stylesheet" href="/style.css">
+
+<!-- Container for the form   -->
 <div class="container">
     <div class="row">
         <div class="offset-md-3 col-md-6">
+            <!-- Title   -->
             <h1><%= title %></h1>
-
+            <!-- Sends form data through post   -->
             <form class="form" method="post">
                 <div class="form-group">
+                    <!-- Assignemnt title label   -->
                     <label for="nameTextField">Assignment Title</label>
                     <input type="text" class="form-control"
                     id="nameTextField"
@@ -15,6 +23,7 @@
                 </div>
 
                 <div class="form-group">
+                    <!-- Course label   -->
                     <label for="courseTextField">Course </label>
                     <input type="text" class="form-control"
                     id="courseTextField"
@@ -23,6 +32,7 @@
                 </div>
 
                 <div class="form-group">
+                    <!-- Due date label   -->
                     <label for="publishedTextField">Due Date</label>
                     <input type="text" class="form-control"
                     id="duedateTextField"
@@ -31,6 +41,7 @@
                 </div>
 
                 <div class="form-group">
+                    <!-- Priorit label   -->
                     <label for="priorityTextField">Priority </label>
                     <textarea type="text" class="form-control"
                     id="priorityTextField"
@@ -39,6 +50,7 @@
                 </div>
 
                 <div class="form-group">
+                    <!-- Status label   -->
                     <label for="priceTextField">Status </label>
                     <input type="text" class="form-control"
                     id="priceTextField"
@@ -47,6 +59,7 @@
                 </div>
                 
                 <div class="form-group">
+                    <!--  Chapter label   -->
                     <label for="priceTextField">Chapter </label>
                     <input type="text" class="form-control"
                     id="priceTextField"
@@ -55,14 +68,18 @@
                 </div>
 
                 <br>
+                <!-- Submit Button   -->
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> Submit
                 </button>
+                <!-- Link to the assignments   -->
                 <a href="/assignments" class="btn btn-warning">
+                    <!-- Cancel   -->
                     <i class="fas fa-undo"></i> Cancel
                 </a>
             </form>
         </div>
     </div>
 </div>
+<!-- Includes footer.ejs  -->
 <%- include ../partials/footer.ejs %>

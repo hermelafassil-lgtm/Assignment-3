@@ -1,11 +1,17 @@
+<!-- Includes header.ejs  -->
 <%- include ../partials/header.ejs %>
+<!-- Includes main_nav.ejs  -->
 <%- include ../partials/main_nav.ejs %>
+<!-- Style Sheet-->
+<link rel="stylesheet" href="/style.css">
+
 <div class="container">
     <div class="row">
         <div class="offset-md-3 col-md-6">
             <h1><%= title %></h1>
             <form class="form" method="post">
                 <div class="form-group">
+                    <!-- Label for Assignment Title-->
                     <label for="titleTextField">Assignemnt Title</label>
                     <input type="text" class="form-control"
                     id="titleTextField"
@@ -15,6 +21,7 @@
                     required>
                 </div>
                 <div class="form-group">
+                    <!-- Label for Assignment Course-->
                     <label for="courseTextField">Assignment course</label>
                     <input type="text" class="form-control"
                     id="courseTextField"
@@ -25,7 +32,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="duedateTextField">Assignment duedate</label>
+                    <!-- Label for Assignment Due Dates-->
+                    <label for="duedateTextField">Assignment Due date</label>
                     <input type="text" class="form-control"
                     id="duedateTextField"
                     placeholder="Enter the Due date of the assignment"
@@ -35,6 +43,7 @@
                 </div>
 
                 <div class="form-group">
+                    <!-- Label for Assignment priority -->
                     <label for="priorityTextArea">Assignment priority</label>
                     <textarea type="text" class="form-control"
                     id="priorityTextField"
@@ -44,6 +53,7 @@
                 </textarea>
                 </div>
                 <div class="form-group">
+                    <!-- Label for Assignment Status-->
                     <label for="statusTextField">Assignment status</label>
                     <input type="text" class="form-control"
                     id="statusTextField"
@@ -54,6 +64,7 @@
                 </div>
                 
                 <div class="form-group">
+                    <!-- Label for Assignment chapter-->
                     <label for="chapterTextField">Assignment chapter</label>
                     <input type="text" class="form-control"
                     id="chapterTextField"
@@ -63,14 +74,17 @@
                     required>
                 </div>
                 <br>
+                <!-- Submit Button-->
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> Submit
                 </button>
                 <a href="/assignments" class="btn btn-warning">
+                    <!-- Cancel Button-->
                     <i class="fas fa-undo"></i> Cancel
                 </a>
             </form>
         </div>
     </div>
 </div>
+<!-- Includes footer.ejs  -->
 <%- include ../partials/footer.ejs %>
