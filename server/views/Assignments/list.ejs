@@ -5,37 +5,38 @@
 <main class="container">
     <div class="row">
         <div class="offset-md-1 col-md-10">
-            <h1><%= title %></h1>
+              <h1 class="text-center mb-4"> Assignments</h1>
             <table class="table table-bordered table-striped table-hover">
     
                 <!--Header Row-->
                 <tr class="d-flex">
                     <th class="text-center col-2">Title</th>
                     <th class="text-center col-2">Course</th>
-                    <th class="text-center col-1">duedate</th>
-                    <th class="col-4">Description</th>
-                    <th class="text-center col-1">priority</th>
-                    <th class="text-center col-1">status</th>
-                    <th class="text-center col-1">chapter</th>
+                    <th class="text-center col-2">duedate</th>
+                    <th class="text-center col-2">priority</th>
+                    <th class="text-center col-2">status</th>
+                    <th class="text-center col-2">chapter</th>
                 </tr>
                 <% for(let count=0; count<AssignmentList.length;count++) { %>
                     <tr class="d-flex">
                         <td class="text-center col-2"><%= AssignmentList[count].title %></td>
                         <td class="text-center col-2"><%= AssignmentList[count].course %></td>
-                        <td class="text-center col-1"><%= AssignmentList[count].duedate %></td>
-                        <td class="col-4"><%= AssignmentList[count].description %></td>
-                        <td class="text-center col-1"><%= AssignmentList[count].priority %></td>
-                        <td class="text-center col-1"><%= AssignmentList[count].status %></td>
-                        <td class="text-center col-1"><%= AssignmentList[count].chapter %></td>
-                        <td class="text-center col-1">
+                        <td class="text-center col-2"><%= AssignmentList[count].duedate %></td>
+                        <td class="text-center col-2"><%= AssignmentList[count].priority %></td>
+                        <td class="text-center col-2"><%= AssignmentList[count].status %></td>
+                        <td class="text-center col-2"><%= AssignmentList[count].chapter %></td>
+                        <td class="text-center col-2">
                             <a href="/assignments/edit/<%= AssignmentList[count]._id %>" class="btn btn-primary btn-sm">
-                                <i class="fas fa-pencil-alt"></i> Edit
+                                <i class="fas fa-pencil-alt"></i> Editss
                             </a>
                         </td>
                         <td class="text-center col-1">
-                            <a href="/assignments/delete/<%= AssignmentList[count]._id %>" class="btn btn-danger btn-sm">
-                                <i class="fas fa-trash-alt"></i> Delete
+                            <a href="/assignments/delete/<%= AssignmentList[count]._id %>" 
+                               class="btn btn-danger btn-sm"
+                               onclick="return confirm('Are you 100% sure you would like to delete this assignment? this action canNOT be undone!');">
+                            <i class="fas fa-trash-alt"></i> Delete
                             </a>
+                            
                         </td>
                     </tr>
 

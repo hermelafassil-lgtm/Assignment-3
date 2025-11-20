@@ -5,33 +5,33 @@
 
   <% if (title==='Contact us' ) { %>
 
-<div class="container mt-4" style="max-width: 600px;">
+<div class="container mt-4" style="max-width: 850px;">
   <h1 class="text-center mb-4"><%= title %></h1>
   <h5 class="text-center">
-    If you would like to get in contact with me, you can do so by filling out the form below!
+    If you have any questions/concerns or comments about the assignment tracker please fill out the form bellow.
   </h5>
 
 
 <div class="container">
     <div class="row">
         <div class="col-md">
-            <form action="contact" method="post"> {{--action = where the data must go--}}
+            <form action="contact" method="post"> 
 
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    <input type="text" class="form-control" id="name" name="name">
                 </div>
                 <div class="form-group">
                     <label for="email">Email address:</label>
-                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    <input type="email" class="form-control" id="email" name="email">
                 </div>
                 <div class="form-group">
-                    <label for="mobile">Mobile Nr:</label>
-                    <input type="email" class="form-control" id="mobile" placeholder="Mobile Nr should start with 08, 07 or 06">
+                    <label for="tel">Number:</label>
+                    <input type="tel" class="form-control" id="mobile" name="mobile">
                 </div>
                 <div class="form-group">
-                    <label for="message">Your message...</label>
-                    <textarea class="form-control" id="message" rows="3"></textarea>
+                    <label for="message">Your message</label>
+                    <textarea class="form-control" id="message" name="message"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Send</button>
              </form>
@@ -39,7 +39,6 @@
         </div>
     </div>
 </div>
-
 
 <% } %>
 

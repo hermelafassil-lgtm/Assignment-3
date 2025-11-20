@@ -4,5 +4,13 @@
       </nav>
     </footer>
     <script src="/Script/app.js"></script>
+    <script>
+  // Remove the splash so it does not block clicks after fade-out
+  setTimeout(() => {
+    const splash = document.getElementById("splash");
+    if (splash) splash.style.display = "none";
+  }, 2500);
+</script>
+
   </body>
 </html>

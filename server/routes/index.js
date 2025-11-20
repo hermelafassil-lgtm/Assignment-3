@@ -34,4 +34,14 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact us' });
 });
 
+router.post('/contact', (req, res) => {
+    console.log(req.body);
+
+    res.render('contact', { 
+        title: 'Contact us',
+        message: 'Your message has been sent!'
+    });
+});
+
+
 module.exports = router;
