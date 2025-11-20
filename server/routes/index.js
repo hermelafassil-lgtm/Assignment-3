@@ -29,11 +29,6 @@ router.get('/products', function(req, res, next) {
   res.render('products', { title: 'Products' });
 });
 
-router.get('/assignments', function(req, res, next) {
-  res.render('Assignments/index', { title: 'Assignments' });
-});
-
-
 /* GET contact page */
 router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact us' });

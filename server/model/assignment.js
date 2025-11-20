@@ -4,10 +4,10 @@ let mongoose = require('mongoose')
 let assignmentModel = mongoose.Schema({
     title:String,
     course:String,
-    duedate:String,
-    priority:Date,
+    duedate:Date,
+    priority:String,
     status: String,
-    chapter:Number
+    chapter:String
 },
 {
     collection:"assignments"

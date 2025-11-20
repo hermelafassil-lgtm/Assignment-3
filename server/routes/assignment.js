@@ -8,7 +8,10 @@ let Assignment = require('../model/assignment');
 router.get('/',async(req,res,next)=>{
     try{
         const AssignmentList = await Assignment.find();
-        res.render('Assignments/list',{ title:'Assignments',AssignmentList})
+        res.render('Assignments/list',{ 
+            title:'Assignments',
+            AssignmentList:AssignmentList
+        })
     }
     catch(err)
     {
@@ -25,7 +28,7 @@ router.get('/add',async(req,res,next)=>{
     try
     {
         res.render('Assignments/add',{
-            title:'Add Assignment',
+            title:'Add Assignment'
         });
     }
     catch(err)
